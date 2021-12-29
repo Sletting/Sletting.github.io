@@ -449,6 +449,37 @@ pre {
   }
 }
 
+/* Frameholder and iFrame */
+
+.frameholder {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.iframe {
+  height: 20em;
+
+  @include breakpoint("<=xlarge") {
+    height: 20em;
+  }
+
+  @include breakpoint("<=large") {
+    height: 16em;
+  }
+
+  @include breakpoint("<=medium") {
+    height: 16em;
+  }
+
+  @include breakpoint("<=small") {
+    height: 16em;
+  }
+
+  @include breakpoint("<=xsmall") {
+    height: 16em;
+  }
+}
+
 /* Section/Article */
 
 section,
@@ -770,6 +801,12 @@ input[type="radio"] {
         opacity: 1;
       }
     }
+  }
+
+  &.navthumb {
+    &:after {
+      content: "Goto";
+    }      
   }
 
   img {

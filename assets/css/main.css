@@ -1681,6 +1681,46 @@ pre code {
   }
 }
 
+/* Frameholder and iFrame */
+.frameholder {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.iframe {
+  height: 20em;
+}
+
+@media screen and (max-width: 1800px) {
+  .iframe {
+    height: 20em;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .iframe {
+    height: 16em;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .iframe {
+    height: 16em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .iframe {
+    height: 16em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .iframe {
+    height: 16em;
+  }
+}
+
 /* Section/Article */
 section.special,
 article.special {
@@ -2012,6 +2052,10 @@ input[type="radio"] + label:before {
 .image.thumb:hover:before {
   background: url("images/overlay.png"), url("images/overlay.png");
   opacity: 1;
+}
+
+.image.navthumb:after {
+  content: "Goto";
 }
 
 .image img {
