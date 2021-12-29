@@ -33,9 +33,148 @@
             Raspberry Pi Automated Drinks Machine
           </h2>
         </header>
-        <p class="date">20/12/2021</p>
+        <p class="date">29/12/2021</p>
         <p>
-          TBA
+          A day I was browsing youtube I fell across a video of a drinks
+          machine. You selected a drink using a small text-only screen and some
+          physical buttons to navigate. It worked by moving a glass on a slider.
+          When it reached its destination it raised the glass and a release
+          mechanism poured 2cl alcohol into the glass. It slid back and forth,
+          raising the glass at every destination until it had combined all the
+          needed alcoholic ingredients. When the alcohol had poured it slid to
+          one end where it filled it with the desired soda or juice before
+          serving it. I loved the concept but my biggest problem with the
+          machine was the size and lacking navigation system. It was around 2.5
+          meters wide and the navigation system seemed lacking; because of the
+          small screen size. I thought to myself “There has to be a better
+          solution” and then I started prototyping.
+        </p>
+        <div class="row">
+          <article class="col-4 col-12-xsmall work-item">
+            <a href="../images/fulls/prototyping_03.jpg" class="image fit thumb"
+              ><img src="../images/thumbs/prototyping_03.jpg" alt=""
+            /></a>
+            <h3 style="display: none">Prototyping</h3>
+          </article>
+          <article class="col-4 col-12-xsmall work-item">
+            <a href="../images/fulls/prototyping_02.jpg" class="image fit thumb"
+              ><img src="../images/thumbs/prototyping_02.jpg" alt=""
+            /></a>
+            <h3 style="display: none">Prototyping</h3>
+          </article>
+          <article class="col-4 col-12-xsmall work-item">
+            <a href="../images/fulls/prototyping_01.jpg" class="image fit thumb"
+              ><img src="../images/thumbs/prototyping_01.jpg" alt=""
+            /></a>
+            <h3 style="display: none">Prototyping</h3>
+          </article>
+        </div>
+        <p>
+          My goal was to reduce the size to increase the mobility while also
+          making it a better user experience. Many of the drinks machines I drew
+          inspiration from were based on Arduinos. I wanted my machine to be
+          have better UX than the Arduino counterparts and I wanted to show more
+          relevant data to the users. Thus I used a Rasperry Pi instead. With
+          that I could use a proper screen and it also gave me easier WiFi
+          connectivity. I opted for not using a slider that pushes the glass
+          against a release mechanism. Instead I used tubes and peristaltic
+          pumps to pump liquids into the glass. That way I could drastically
+          reduce the size. 
+          <div class="row">
+            <article class="col-4 col-12-xsmall work-item">
+              <a href="../images/fulls/chassis_building_01.jpg" class="image fit thumb"
+                ><img src="../images/thumbs/chassis_building_01.jpg" alt=""
+              /></a>
+              <h3 style="display: none">Chassis building process</h3>
+            </article>
+            <article class="col-4 col-12-xsmall work-item">
+              <a href="../images/fulls/chassis_building_02.jpg" class="image fit thumb"
+                ><img src="../images/thumbs/chassis_building_02.jpg" alt=""
+              /></a>
+              <h3 style="display: none">Chassis building process</h3>
+            </article>
+            <article class="col-4 col-12-xsmall work-item">
+              <a href="../images/fulls/chassis_building_03.jpg" class="image fit thumb"
+                ><img src="../images/thumbs/chassis_building_03.jpg" alt=""
+              /></a>
+              <h3 style="display: none">Chassis building process</h3>
+            </article>
+            <article class="col-4 col-12-xsmall work-item">
+              <a href="../images/fulls/pumps.jpg" class="image fit thumb"
+                ><img src="../images/thumbs/pumps.jpg" alt=""
+              /></a>
+              <h3 style="display: none">Fitting pumps</h3>
+            </article>
+            <article class="col-4 col-12-xsmall work-item">
+              <a href="../images/fulls/pump_controllers.jpg" class="image fit thumb"
+                ><img src="../images/thumbs/pump_controllers.jpg" alt=""
+              /></a>
+              <h3 style="display: none">Adding pump controllers</h3>
+            </article>
+            <article class="col-4 col-12-xsmall work-item">
+              <a href="../images/fulls/pumps_installed.jpg" class="image fit thumb"
+                ><img src="../images/thumbs/pumps_installed.jpg" alt=""
+              /></a>
+              <h3 style="display: none">Installing pumps</h3>
+            </article>
+          </div>
+          Peristaltic pumps are very precise which is a good
+          thing for making drinks. One caveat of using peristaltic pumps were
+          that the soda lost all its fizz. To counter that I opted for using a
+          different pumping system for soda and juice. I used an air pump to
+          pump air into the soda bottle which adds pressure inside the bottle.
+          To release the pressure a bigger tube is located at the bottom of the
+          bottle, forcing the liquid out of the bottle. When the bottle is full
+          its precise enough that you cannot tell two drinks apart. But when the
+          bottle is close to empty it takes longer to build up pressure. This is
+          something I am still working on refining. 
+        </p>
+        <div class="frameholder">
+        <iframe class="iframe"
+        src="https://www.youtube.com/embed/8duF8BaBsbk">
+        </iframe>
+        </div>            
+        <p>
+          For interfacing with the
+          machine I used a 7" touch screen. The interface was build using
+          Angular and Node.JS. Configuration of pumps happens on the machine.
+          Here you specify what ingredients you have in your pumps. When the
+          ingredients has been specified it will sort the drinks accordingly. It
+          only shows drinks that it is able to make and omit all others. To make
+          it easy to create new drinks I created a website called
+          <a href="https://boozit.dk/">Boozit.dk</a>. Right now the website and
+          the drinks machine is not coupled directly together. Meaning that
+          there is no mention of the drinks machine on the website. The website
+          has an open API where you can search drinks by username and get the
+          result in JSON format. That is what the machine uses to get drinks.
+        </p>
+        <div class="row">
+          <article class="col-4 col-12-xsmall work-item">
+            <a href="../images/fulls/final_testing.jpg" class="image fit thumb"
+              ><img src="../images/thumbs/final_testing.jpg" alt=""
+            /></a>
+            <h3 style="display: none">Final testing</h3>
+          </article>
+          <article class="col-4 col-12-xsmall work-item">
+            <a href="../images/fulls/ui_closeup.jpg" class="image fit thumb"
+              ><img src="../images/thumbs/ui_closeup.jpg" alt=""
+            /></a>
+            <h3 style="display: none">UI Closeup</h3>
+          </article>
+          <article class="col-4 col-12-xsmall work-item">
+            <a href="../images/fulls/drinks-machine.jpg" class="image fit thumb"
+              ><img src="../images/thumbs/drinks-machine.jpg" alt=""
+            /></a>
+            <h3 style="display: none">Finished machine</h3>
+          </article>          
+        </div>
+        <p>
+          The project took around 1 year to complete with the help from family
+          and friends. The machine had its debut at a New Years party in 2020. I
+          have several things that I would like to refine including a new
+          website for creating drinks, better handling of soda/juice and more
+          configuration options. <br>
+          More pictures from the project can be found <a href="https://drive.google.com/drive/u/0/folders/1MFWhJvOUvIm2mdRk0p76LK1tEX-APvS7">here.</a>
         </p>
       </section>
     </div>
