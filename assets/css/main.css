@@ -2055,7 +2055,7 @@ input[type="radio"] + label:before {
 }
 
 .image.navthumb:after {
-  content: "Goto";
+  content: "Go to";
 }
 
 .image img {
